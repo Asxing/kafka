@@ -82,6 +82,8 @@ object Kafka extends Logging {
   }
 
   def main(args: Array[String]): Unit = {
+    val args = Array("""/Users/zeyangg/SynologyDrive/ww/kafka/config/server.properties""")
+    System.setProperty("log4j.configuration", """file:/Users/zeyangg/SynologyDrive/ww/kafka/config/log4j.properties""")
     try {
       val serverProps = getPropsFromArgs(args)
       val server = buildServer(serverProps)

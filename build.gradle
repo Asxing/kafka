@@ -791,6 +791,9 @@ project(':core') {
       exclude module: 'slf4j-log4j12'
       exclude module: 'log4j'
     }
+    compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.30'
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.30'
+
     // ZooKeeperMain depends on commons-cli but declares the dependency as `provided`
     implementation libs.commonsCli
 
